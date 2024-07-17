@@ -135,4 +135,4 @@ def handle_connect():
 if __name__ == '__main__':
     socketio.start_background_task(target=simulate_stock_prices)
     socketio.run(app, debug=True)
-# あぁぁ
+# あぁぁぁぁぁ
