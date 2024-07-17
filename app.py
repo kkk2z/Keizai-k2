@@ -3,7 +3,11 @@ from flask_socketio import SocketIO, emit
 import random
 import sqlite3
 from datetime import datetime, timedelta
+from werkzeug.serving import run_simple
+from your_application import app
 
+if __name__ == '__main__':
+    run_simple('localhost', 5000, app)
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 socketio = SocketIO(app)
