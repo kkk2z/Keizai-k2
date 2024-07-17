@@ -3,9 +3,22 @@ from flask_socketio import SocketIO, emit
 import random
 import sqlite3
 from datetime import datetime, timedelta
+from flask import Flask, render_template
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/news')
+def news():
+    return render_template('news.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+app = Flask(__name__)
+app.config['SECRET_KEY'] = '030-18-007'
 socketio = SocketIO(app)
 
 # SQLiteデータベースの初期設定
