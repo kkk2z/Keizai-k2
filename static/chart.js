@@ -1,3 +1,4 @@
+src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io.connect('http://' + document.domain + ':' + location.port);
 
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         yAxes: [{
                             ticks: {
                                 beginAtZero: false
-                            
+                            }
                         }]
                     }
                 }

@@ -1,1 +1,25 @@
+{% extends 'base.html' %}
 
+{% block content %}
+<div class="container">
+    <h1>Trade Stocks</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Stock Price</th>
+                <th>Trade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for company in companies %}
+            <tr>
+                <td>{{ company.name }}</td>
+                <td id="company_{{ company.id }}">{{ company.stock_price }}</td>
+                <td><button onclick="buyStock({{ company.id }})">Buy</button> <button onclick="sellStock({{ company.id }})">Sell</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

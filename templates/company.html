@@ -1,1 +1,9 @@
+{% extends 'base.html' %}
 
+{% block content %}
+<div class="container">
+    <h1>{{ company.name }}</h1>
+    <p>Current Stock Price: {{ company.stock_price }}</p>
+    <!-- 企業の詳細情報や株価推移を表示 -->
+</div>
+{% endblock %}
